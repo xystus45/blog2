@@ -25,19 +25,13 @@ Run the application:
 
 Now navigate to your browser at: ```localhost:5000```
 
-## Technologies Used
-*Python
-*Jquery
-*Flask
-*HTML5
-*CSS3
-*Bootstrap
-*Chart.js
+***## Technologies Used
+*Python *Jquery *Flask *HTML5 *CSS3 *Bootstrap 
 
 ## Support and contact details
 Incase of any issues please make a pull request and or raise an issue and i will take care of it.
 
-### License
+### License***
 MIT LICENSE
 Copyright (c) 2019 **Xystus ngigi**
   
