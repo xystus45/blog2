@@ -1,8 +1,8 @@
-# Blog Posting Application 
+# **Blog Posting Application **
 
 #### This is an application that users can post an article on the webpage. 
 
-#### By Xystus ngigi
+####** By Xystus ngigi**
 
 ## Description
     This web application is built using Python framework known as Flask. The app displays blogs that have been posted and  by the users and other users can login and  leave a comment.
