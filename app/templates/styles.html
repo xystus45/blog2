@@ -1,0 +1,24 @@
+{% block styles %}
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+<!-- Nucleo Icons -->
+<link href="{{ url_for('static' ,filename='css/nucleo-icons.css') }}" rel="stylesheet" />
+
+<!-- CSS Files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blk-design-system.css')}}">
+
+<script src="{{ url_for('static', filename='js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/plugins/bootstrap-switch.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/plugins/nouislider.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/plugins/chartjs.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/plugins/moment.min.js')}}"></script>
+<script src=" {{ url_for('static', filename='js/plugins/bootstrap-datetimepicker.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/blk-design-system.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+<!-- Content block -->
+{% block content%}
+
+<div class="wrapper">
+    <div class="page-header header-filter">
+        <div class="squares square1"></div>
+        <div class="squares square2"></div>
+        <div class="squares square3"></div>
+        <div class="squares square4"></div>
+        <div class="squares square5"></div>
+        <div class="squares square6"></div>
+        <div class="squares square7"></div>
+        <div class="container">
+          {%for quote in quote%}
+            <p>{{quote.quote}}</p>
+            <i>{{quote.author}}</i>
+          {%endfor%}
+        </div>
+    </div>
+
+    {% if posts == 'None' %}
+    <div class="section section-nucleo-icons">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8 col-md-12">
+
+                    <h2 class="title"> BLOGS </h2>
+
+                    <h4 class="description">
+                        There are no posted blogs yet.
+                    </h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    {% else %}
+    <div class="section section-typo">
+
+        <div class="container">
+            <div id="typography">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="typography-line">
+
+                            {{ macro.displayPosts(posts) }}
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+</div>
+
+{% endblock %}

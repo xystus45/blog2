@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<body class="profile-page sidebar-collapse">
+
+    <div class="wrapper">
+        <div class="page-header">
+            <div class="container align-items-center">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+
+                        {% if user.firstname != 'None' %}
+                        <h1 class="profile-title text-left">{{ user.username | capitalize }}</h1>
+
+                        {% else %}
+
+                        <h1 class="profile-title text-left">{{ user.firstname }} {{ user.lastname }} </h1>
+
+                        {% endif %}
+                        <h5 class="text-on-back">{{ user.username | capitalize}}</h5>
+
+                        <!-- Displaying user bio -->
+                        {% if user.bio == None %}
+                        <p class="profile-description"> Please update your profile description </p>
+
+                        {% else %}
+
+                        <p class="profile-description"> {{ user.bio }} </p>
+
+                        {% endif %}
+
+                        <div class="btn-wrapper profile pt-3">
+                            <a target="_blank" href="https://twitter.com/" class="btn btn-icon btn-twitter btn-round"
+                                data-toggle="tooltip" data-original-title="Follow us">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/"
+                                class="btn btn-icon btn-facebook btn-round" data-toggle="tooltip"
+                                data-original-title="Like us">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a target="_blank" href="https://dribbble.com/" class="btn btn-icon btn-dribbble  btn-round"
+                                data-toggle="tooltip" data-original-title="Follow us">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                        <div class="card card-coin card-plain">
+                            <div class="card-header">
+                                {% if user.profile_pic_path %}
+                                <img src="{{url_for('static',filename=user.profile_pic_path)}}"
+                                    class="img-center img-fluid rounded-circle shadow" style="width: 150px;">
+                                {% else %}
+
+                                <img src="/static/img/rust.jpg" class="img-center img-fluid rounded-circle shadow"
+                                    style="width: 150px;">
+
+                                {% endif %}
+
+
+
+                                <h1 class="title"> {{ user.username | capitalize  }} </h1>
+                            </div>
+                            <div class="card-body">
+
+                                <p class="profile-description text-left"> Please give a description of what you of your
+                                    achievemnts and projects that you are working on</p>
+                                <div class="btn-wrapper pt-3">
+                                    <button href="javascript:void(0)" class="btn btn-simple btn-primary">
+                                        <i class="tim-icons icon-book-bookmark"></i> Follow
+                                        {{ user.username | capitalize }}
+                                    </button>
+                                    <button href="javascript:void(0)" class="btn btn-simple btn-info">
+                                        <i class="tim-icons icon-bulb-63"></i> Message
+                                    </button>
+
+
+
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+{% endblock %}
