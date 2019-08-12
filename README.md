@@ -11,8 +11,8 @@
 First clone the repo
    ```$ git clone https://github.com/xystus45/blog ```
 
-After cloning, navigate to the project:
-   `` $ cd blog-flask``
+*After cloning, navigate to the project:*
+  *` `` $ cd blog-flask```*
 
 Then install all the requirements through pip:
    ```$ pip install -r requirements.txt ```
